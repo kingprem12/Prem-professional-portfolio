@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Prem S · Software Engineer</title>
+  <meta name="description" content="Prem S: Software Development Engineer, Java full stack and AWS cloud developer. Projects, experience, certifications and achievements." />
+  <meta name="theme-color" content="#05060d" />
+  <meta property="og:title" content="Prem S · Software Engineer" />
+  <meta property="og:description" content="Java full stack, cloud and app developer building scalable systems." />
+  <meta property="og:image" content="assets/img/prem.jpg" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%2305060d'/><text x='50%' y='56%' text-anchor='middle' dominant-baseline='middle' font-family='Arial' font-weight='700' font-size='30' fill='%2338e1ff'>PS</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/showcase.css" />
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader-ring"></div>
+    <span class="mono">initialising<span class="dots"></span></span>
+  </div>
+
+  <canvas id="scene" aria-hidden="true"></canvas>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+  <header class="nav" id="nav">
+    <a href="#top" class="brand"><span class="brand-mark">PS</span><span class="brand-name">Prem S</span></a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#products">Products</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#achievements">Awards</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="btn btn-small" id="navResume" target="_blank" rel="noopener">Resume</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero" id="hero">
+      <div class="hero-inner">
+        <p class="eyebrow mono"><span class="pulse"></span> Open to SDE, full stack, mobile &amp; cloud roles · 2027 grad</p>
+        <h1 class="hero-title">
+          <span class="line">Hi, I'm <span class="grad">Prem S</span></span>
+          <span class="line role-line"><span id="typed"></span><span class="caret">|</span></span>
+        </h1>
+        <p class="hero-sub" id="heroSummary"></p>
+        <div class="hero-cta">
+          <a href="#products" class="btn btn-primary">See my shipped apps</a>
+          <a id="heroResume" class="btn btn-ghost" target="_blank" rel="noopener">Download resume</a>
+        </div>
+        <div class="hero-social" id="heroSocial"></div>
+      </div>
+      <a href="#about" class="scroll-hint mono" aria-label="Scroll to about"><span class="mouse"><span></span></span>scroll</a>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="section-head reveal">
+        <span class="mono idx">01</span>
+        <h2>About me</h2>
+      </div>
+      <div class="about-grid">
+        <div class="photo-card tilt reveal">
+          <div class="photo-frame">
+            <img src="assets/img/prem.jpg" alt="Portrait of Prem S" loading="lazy" />
+          </div>
+          <div class="photo-badge mono"><span class="pulse"></span> Coimbatore, IN</div>
+        </div>
+        <div class="about-text reveal">
+          <p class="lead">A computer science (IoT) undergraduate at <strong>Sri Krishna College of Technology</strong> who is happiest when a system works end to end, from the database schema to the pixel.</p>
+          <p id="aboutSummary"></p>
+          <div class="code-card mono" aria-label="Profile as code">
+<pre><span class="k">const</span> prem = {
+  focus: [<span class="s">"Java"</span>, <span class="s">"Spring Boot"</span>, <span class="s">"React"</span>, <span class="s">"AWS"</span>],
+  building: <span class="s">"scalable backends + clean UIs"</span>,
+  leetcode: <span class="n">300</span>+,
+  shipped: [<span class="s">"Dendo ×3"</span>, <span class="s">"Nexa Ride ×2"</span>],
+  hackathons: { gdg: <span class="s">"🏆 1st"</span>, unstop: <span class="s">"🥈 2nd"</span> },
+  openTo: <span class="s">"SDE · Full Stack · Cloud"</span>,
+};</pre>
+          </div>
+        </div>
+      </div>
+      <div class="stats" id="stats"></div>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section class="section" id="products">
+      <div class="section-head reveal">
+        <span class="mono idx">02</span>
+        <h2>Shipped products</h2>
+      </div>
+      <p class="section-sub reveal">Live on the App Store and Google Play, plus the research platform behind my IEEE paper.</p>
+      <div id="showcase"></div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section" id="skills">
+      <div class="section-head reveal">
+        <span class="mono idx">03</span>
+        <h2>Tech stack</h2>
+      </div>
+      <div class="skills-grid" id="skillsGrid"></div>
+    </section>
+
+    <!-- EXPERIENCE + EDUCATION -->
+    <section class="section" id="experience">
+      <div class="section-head reveal">
+        <span class="mono idx">04</span>
+        <h2>Experience &amp; education</h2>
+      </div>
+      <div class="exp-layout">
+        <ol class="timeline" id="timeline"></ol>
+        <div class="edu" id="education"></div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects">
+      <div class="section-head reveal">
+        <span class="mono idx">05</span>
+        <h2>More projects</h2>
+      </div>
+      <div class="filters reveal" id="filters" role="tablist" aria-label="Filter projects"></div>
+      <div class="projects-grid" id="projectsGrid"></div>
+      <div class="more-link reveal"><a class="btn btn-ghost" id="allRepos" target="_blank" rel="noopener">All repositories on GitHub →</a></div>
+    </section>
+
+    <!-- ACHIEVEMENTS -->
+    <section class="section" id="achievements">
+      <div class="section-head reveal">
+        <span class="mono idx">06</span>
+        <h2>Awards &amp; achievements</h2>
+      </div>
+      <div class="ach-grid" id="achGrid"></div>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section class="section" id="certifications">
+      <div class="section-head reveal">
+        <span class="mono idx">07</span>
+        <h2>Certifications</h2>
+      </div>
+      <div class="filters reveal" id="certFilters" role="tablist" aria-label="Filter certifications"></div>
+      <div class="cert-grid" id="certGrid"></div>
+      <p class="other-creds reveal" id="otherCreds"></p>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section contact" id="contact">
+      <div class="contact-card reveal">
+        <span class="mono idx">08</span>
+        <h2>Let's build something <span class="grad">that scales.</span></h2>
+        <p>I'm looking for SDE, full stack and cloud roles. The quickest way to reach me is email.</p>
+        <a class="contact-email" id="contactEmail"></a>
+        <div class="contact-row" id="contactRow"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer mono">
+    <span>© <span id="year"></span> Prem S</span>
+    <span>Built with Three.js · hand-written HTML, CSS &amp; JS</span>
+  </footer>
+
+  <dialog class="viewer" id="viewer">
+    <div class="viewer-bar">
+      <span class="viewer-title" id="viewerTitle"></span>
+      <div class="viewer-actions">
+        <a id="viewerOpen" class="btn btn-small" target="_blank" rel="noopener">Open</a>
+        <button class="btn btn-small" id="viewerClose" aria-label="Close">✕</button>
+      </div>
+    </div>
+    <div class="viewer-body" id="viewerBody"></div>
+  </dialog>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
